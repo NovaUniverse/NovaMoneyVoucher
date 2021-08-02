@@ -139,7 +139,9 @@ public class NovaMoneyVouchers extends JavaPlugin implements Listener {
 
 		Bukkit.getPluginManager().registerEvents(this, this);
 
-		CommandRegistry.registerCommand(new GiveMoneyVoucherCommand());
+		if(getConfig().getBoolean("register_command")) {
+			CommandRegistry.registerCommand(new GiveMoneyVoucherCommand());
+		}
 
 		Log.info("MoneyVouchers", "MoneyVouchers has beeen enabled");
 	}
@@ -203,11 +205,11 @@ public class NovaMoneyVouchers extends JavaPlugin implements Listener {
 							}
 							player.sendMessage(ChatColor.AQUA + formatValue(amount) + ChatColor.GOLD + " has been added to you account");
 						} else {
-							Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "\n" + player.getName() + "Failed to redeem money voucher.\nVault responded with " + response.type.name() + ".\nThe voucher had a value of " + amount);
+							Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "\n" + player.getName() + " Failed to redeem money voucher.\nVault responded with " + response.type.name() + ".\nThe voucher had a value of " + amount);
 							player.sendMessage(ChatColor.RED + "An error occured while redeeming voucher. Please contact an admin");
 						}
 					} else {
-						Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "\n" + player.getName() + "Failed to redeem money voucher.\nThe voucher has a value of 0 or less");
+						Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "\n" + player.getName() + " Failed to redeem money voucher.\nThe voucher has a value of 0 or less");
 						player.sendMessage(ChatColor.RED + "An error occured while redeeming voucher. Please contact an admin");
 					}
 				}

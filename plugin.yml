@@ -3,4 +3,4 @@ name: NovaMoneyVouchers
 description: NovaMoneyVouchers Plugin
 version: 1.1
 
-depend: [NovaCore]
+depend: [NovaCore, Vault]
