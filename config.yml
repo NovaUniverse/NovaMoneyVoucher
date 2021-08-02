@@ -1,0 +1,17 @@
+# Set to true to load currency name form vault instead of from below
+# Setting this to true might not work for all economy plugins 
+use_vault_currency_name: false
+
+# The name of the currency
+currency_name_singular: "$"
+currency_name_plural: "$"
+
+# Set to true to broadcast to the server when a voucher is redeemed
+broadcast_redeem: true
+
+# Change this to change the item type for money vouchers
+# changing this wont affect or invalidate old money vouchers
+voucher_material: "PAPER"
+
+# Set to false to not register the /givemoneyvoucher command
+register_command: true
