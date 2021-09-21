@@ -82,7 +82,7 @@ public class NovaMoneyVouchers extends JavaPlugin implements Listener {
 
 		builder.setName(valueString + " voucher");
 
-		builder.addLore(ChatColor.WHITE + "This is a voucher for" + valueString);
+		builder.addLore(ChatColor.WHITE + "This is a voucher for " + valueString);
 		builder.addLore(ChatColor.WHITE + "Right click to redeem it");
 
 		builder.addEnchant(Enchantment.DURABILITY, 1, true);
