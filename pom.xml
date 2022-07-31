@@ -62,24 +62,19 @@
 
 	<distributionManagement>
 		<snapshotRepository>
-			<id>zeeraas-snapshots</id>
-			<url>https://nexus.zeeraa.net/repository/maven-snapshots/</url>
+			<id>novauniverse2</id>
+			<url>https://nexus2.novauniverse.net/repository/novauniverse/</url>
 		</snapshotRepository>
 		<repository>
-			<id>zeeraas-releases</id>
-			<url>https://nexus.zeeraa.net/repository/maven-releases/</url>
+			<id>novauniverse2</id>
+			<url>https://nexus2.novauniverse.net/repository/novauniverse/</url>
 		</repository>
 	</distributionManagement>
 
 	<repositories>
 		<repository>
-			<id>spigot-repo</id>
-			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-		</repository>
-
-		<repository>
-			<id>zeeraas-repo</id>
-			<url>https://nexus.zeeraa.net/repository/maven-group/</url>
+			<id>novauniverse2</id>
+			<url>https://nexus2.novauniverse.net/repository/novauniverse/</url>
 		</repository>
 
 		<repository>
@@ -90,16 +85,16 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>net.zeeraa.novacore</groupId>
+			<groupId>net.novauniverse.novacore</groupId>
 			<artifactId>novacore-spigot</artifactId>
-			<version>1.1.0-SNAPSHOT</version>
+			<version>2.0.0-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>net.zeeraa.novacore</groupId>
+			<groupId>net.novauniverse.novacore</groupId>
 			<artifactId>novacore-commons</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>2.0.0-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 

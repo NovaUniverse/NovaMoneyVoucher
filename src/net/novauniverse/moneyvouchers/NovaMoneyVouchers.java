@@ -22,7 +22,7 @@ import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.economy.EconomyResponse;
 import net.novauniverse.moneyvouchers.commands.GiveMoneyVoucherCommand;
 import net.zeeraa.novacore.commons.log.Log;
-import net.zeeraa.novacore.spigot.abstraction.VersionIndependantUtils;
+import net.zeeraa.novacore.spigot.abstraction.VersionIndependentUtils;
 import net.zeeraa.novacore.spigot.command.CommandRegistry;
 import net.zeeraa.novacore.spigot.utils.ItemBuilder;
 
@@ -160,11 +160,11 @@ public class NovaMoneyVouchers extends JavaPlugin implements Listener {
 					e.setCancelled(true);
 
 					Player player = e.getPlayer();
-					if (VersionIndependantUtils.get().getItemInMainHand(player).getAmount() > 1) {
-						VersionIndependantUtils.get().getItemInMainHand(player).setAmount(e.getItem().getAmount() - 1);
+					if (VersionIndependentUtils.get().getItemInMainHand(player).getAmount() > 1) {
+						VersionIndependentUtils.get().getItemInMainHand(player).setAmount(e.getItem().getAmount() - 1);
 					} else {
-						if (VersionIndependantUtils.get().getItemInMainHand(player).getAmount() == 1) {
-							VersionIndependantUtils.get().setItemInMainHand(player, ItemBuilder.AIR);
+						if (VersionIndependentUtils.get().getItemInMainHand(player).getAmount() == 1) {
+							VersionIndependentUtils.get().setItemInMainHand(player, ItemBuilder.AIR);
 						} else {
 							boolean removed = false;
 							for (int i = 0; i < player.getInventory().getSize(); i++) {
